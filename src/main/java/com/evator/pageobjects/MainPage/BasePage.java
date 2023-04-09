@@ -41,4 +41,10 @@ public class BasePage {
         WebElement addToCartButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(@class, 'basket-button')]")));
         return addToCartButton.isDisplayed();
     }
+
+    public boolean isIconDisplayed() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+        WebElement addToCartButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='amount ng-star-inserted']")));
+        return addToCartButton.isDisplayed();
+    }
 }

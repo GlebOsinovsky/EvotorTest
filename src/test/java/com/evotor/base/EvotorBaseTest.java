@@ -35,6 +35,8 @@ public class EvotorBaseTest {
         Assert.assertTrue(mainPage.isPageLoaded(), "страница не открылась");
 
         BaseDialog dialogPage = mainPage.clickAddToCartButton();
+        Assert.assertTrue(mainPage.isIconDisplayed(),"Счетчик на иконке корзины не отобразился");
+
         mainPage.clickCartButton();
         Assert.assertTrue(dialogPage.hasItem("Маркировка"), "Товар в корзине не найден");
     }
