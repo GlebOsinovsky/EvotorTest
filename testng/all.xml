@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Main Test Suite">
+
+    <test name="All tests">
+        <classes>
+            <class name="com.evator.base.EvotorBaseTest"/>
+        </classes>
+    </test>
+</suite>
