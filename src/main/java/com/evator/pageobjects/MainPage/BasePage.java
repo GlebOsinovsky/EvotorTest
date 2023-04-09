@@ -15,6 +15,7 @@ public class BasePage {
     private final By addToCartButton = By.xpath("//button[contains(@class, 'basket-button')]");
     private final By cartButton = By.xpath("//evo-header-basket-button[@class='header__button header__button_basket']");
 
+
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -44,7 +45,7 @@ public class BasePage {
 
     public boolean isIconDisplayed() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
-        WebElement addToCartButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='amount ng-star-inserted']")));
-        return addToCartButton.isDisplayed();
+        WebElement counterCart = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='amount ng-star-inserted']")));
+        return counterCart.isDisplayed();
     }
 }
